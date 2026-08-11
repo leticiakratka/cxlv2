@@ -401,6 +401,24 @@ p {
     font-size: 11px
 }
 
+/* topo: o logo é o único item da seção, então o respiro dele vira só o
+   padding da banda seguinte (senão empilha margin do logo + as duas bandas).
+   Seletor duplo de propósito: o @media (max-width:820px) lá embaixo redefine
+   .sec com a mesma especificidade e ganharia por vir depois. */
+.sec.sec--logo {
+    padding-bottom: 0
+}
+
+.sec.sec--logo .logo {
+    margin-bottom: 0
+}
+
+/* com o padding-bottom do logo zerado, esse padding vira o respiro inteiro
+   entre logo e headline: ~1,3x a altura da linha do h2 em qualquer tela */
+.sec.sec--abertura {
+    padding-top: clamp(30px, 5.5vw, 44px)
+}
+
 /* faixa de checks embaixo da headline (a imagem IMG-CARTILHA-60 deles) */
 .faixa {
     display: flex;
