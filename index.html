@@ -23,8 +23,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preload" as="image" href="/img/mockup-preco4.webp">
-    <link rel="preload" as="video" href="/video/stories-iphone-v2.webm">
+    <link rel="preload" as="image" href="/img/mockup-preco4.webp" fetchpriority="high">
 </head>
 
 <body>
@@ -66,7 +65,7 @@
             </div>
 
             <div class="m2" style="max-width:760px;margin-inline:auto">
-                <img src="/img/mockup-preco4.webp" alt="Caixa Livre tudo que você vai ter">
+                <img src="/img/mockup-preco4.webp" alt="Caixa Livre tudo que você vai ter" width="1280" height="1080" fetchpriority="high" decoding="async">
             </div>
         </div>
     </section>
@@ -79,9 +78,9 @@
             </h2>
 
             <div class="g3">
-                <img src="/img/Depoimentos/jhenifer.webp" alt="Jhenifer depomento" style="width: auto;">
-                <img src="/img/Depoimentos/Andressa.webp" alt="Andressa depomento" style="width: auto;">
-                <img src="/img/Depoimentos/Eloisa 2 - CXL.webp" alt="Eloisia depomento" style="width: auto;">
+                <img src="/img/Depoimentos/jhenifer.webp" alt="Jhenifer depomento" style="width: auto;" width="757" height="446" loading="lazy" decoding="async">
+                <img src="/img/Depoimentos/Andressa.webp" alt="Andressa depomento" style="width: auto;" width="575" height="620" loading="lazy" decoding="async">
+                <img src="/img/Depoimentos/Eloisa 2 - CXL.webp" alt="Eloisia depomento" style="width: auto;" width="1051" height="1836" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -96,7 +95,7 @@
             <p class="sub m1">e você sofre todo mês com pensamentos como...</p>
 
             <div class="rum m3">
-                <img src="/img/mulher_preocupada_com_gastos.webp" alt="mulher preocupada com gastos" style="width:auto">
+                <img src="/img/mulher_preocupada_com_gastos.webp" alt="mulher preocupada com gastos" style="width:auto" width="1920" height="2212" loading="lazy" decoding="async">
             </div>
 
             <h2 class="wn m3">Você não aguenta mais chegar no dia 20 do mês sem saber pra onde o seu dinheiro foi...
@@ -105,7 +104,7 @@
             <div class="g2 m3">
                 <div style="display: flex; justify-content: center; align-items: center;">
                     <img src="/img/leticia.webp" alt="leticia"
-                        style="width: 100%; height: auto; border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 15px 0px; object-fit: cover; aspect-ratio: 9/16;">
+                        style="width: 100%; height: auto; border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 15px 0px; object-fit: cover; aspect-ratio: 9/16;" width="3024" height="4032" loading="lazy" decoding="async">
                 </div>
                 <div class="esq">
                     <h2 class="mb1">Agora eu te pergunto...</h2>
@@ -193,7 +192,7 @@
                 </div>
                 <div>
                     <img src="/img/planilha-pc.webp" alt="Planilha Caixa Livre 2.0"
-                        style="width:100%;border-radius:16px">
+                        style="width:100%;border-radius:16px" width="1536" height="1024" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -225,7 +224,7 @@
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center">
                     <img src="/img/analise clara.webp" alt="Clara"
-                        style="width: 50%; height: auto; border-radius: 16px; max-height: 600px;">
+                        style="width: 50%; height: auto; border-radius: 16px; max-height: 600px;" width="738" height="1600" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -238,7 +237,7 @@
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center">
                     <img src="/img/mockup-preco4.webp" alt="Clara"
-                        style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;">
+                        style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;" width="1280" height="1080" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -264,7 +263,7 @@
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center">
                     <img src="/img/analise-mes.webp" alt="Calendário"
-                        style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;">
+                        style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;" width="879" height="749" loading="lazy" decoding="async">
                 </div>
             </div>
 
@@ -276,8 +275,11 @@
                         quanto dá pra recuperar e o que ajustar primeiro.</p>
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center">
-                    <video src="/video/stories-iphone-v2.webm" autoplay loop muted playsinline
+                    <video data-lazy-video poster="/video/stories-poster.jpg" width="720" height="1280"
+                        preload="none" loop muted playsinline
                         style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;">
+                        <source data-src="/video/stories-720.webm" type="video/webm">
+                        <source data-src="/video/stories-720.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -291,11 +293,11 @@
             <h2 class="wn mb3"><span class="az">Mais de 2.500 pessoas</span> já estão usando o Caixa Livre 2.0</h2>
             <div class="g3">
                 <img src="/img/Depoimentos/tati.webp" alt="Tati"
-                    style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;">
+                    style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;" width="867" height="1442" loading="lazy" decoding="async">
                 <img src="/img/Depoimentos/endressa.webp" alt="Andressa"
-                    style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;">
+                    style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;" width="575" height="620" loading="lazy" decoding="async">
                 <img src="/img/Depoimentos/francisco.webp" alt="Francisco"
-                    style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;">
+                    style="width: 100%; height: auto; border-radius: 16px; max-height: 600px;" width="575" height="294" loading="lazy" decoding="async">
             </div>
         </div>
     </section>
@@ -309,7 +311,7 @@
             <div class="g2">
                 <div style="display: flex; justify-content: center; align-items: center">
                     <img src="/img/leticia-profile.webp" alt="Letícia"
-                        style="width: auto; height: auto; border-radius: 16px; max-height: 600px;">
+                        style="width: auto; height: auto; border-radius: 16px; max-height: 600px;" width="1040" height="1558" loading="lazy" decoding="async">
                 </div>
                 <div>
                     <div class="chk"><svg viewBox="0 0 512 512">
@@ -391,7 +393,7 @@
 
                 <div style="max-width:690px;margin-inline:auto">
                     <img src="/img/mockup-preco4.webp" alt="Caixa Livre"
-                        style="width: 100%; height: auto; border-radius: 16px;">
+                        style="width: 100%; height: auto; border-radius: 16px;" width="1280" height="1080" loading="lazy" decoding="async">
                 </div>
 
                 <div class="hr"></div>
@@ -466,7 +468,7 @@
         <div class="w g2">
             <div style="display: flex; justify-content: center;">
                 <img src="/img/foto whatsapp.webp" alt="Leticia Kratka"
-                    style="width: 100%; height: auto; border-radius: 16px;">
+                    style="width: 100%; height: auto; border-radius: 16px;" width="920" height="914" loading="lazy" decoding="async">
             </div>
             <div class="esq">
                 <h2 class="mb1">Leticia Kratka</h2>
@@ -532,7 +534,7 @@
 
                 <div style="max-width:690px;margin-inline:auto">
                     <img src="/img/mockup-preco4.webp" alt="Caixa Livre"
-                        style="width: 100%; height: auto; border-radius: 16px;">
+                        style="width: 100%; height: auto; border-radius: 16px;" width="1280" height="1080" loading="lazy" decoding="async">
                 </div>
 
                 <div class="hr"></div>
@@ -589,7 +591,7 @@
                 </details>
                 <details>
                     <summary>Por quanto tempo tenho acesso?</summary>
-                    <p><span class="fill">[preencher com a política de acesso atual]</span></p>
+                    <p>Você tem 7 dias de acesso a partir da confirmação da compra.</p>
                 </details>
                 <details>
                     <summary>Funciona no celular?</summary>
@@ -614,7 +616,8 @@
         <div class="w">
             <div class="logo logo--p" style="margin-bottom:22px">CAIXA LIVRE</div>
             <p class="mini" style="margin-bottom:6px">Tem dúvidas? Entre em contato:</p>
-            <p class="mini" style="margin-bottom:22px"><u><span class="campo">[e-mail de contato]</span></u></p>
+            <p class="mini" style="margin-bottom:22px"><a href="mailto:contato@leticiakratka.com.br"
+                    style="color:inherit">contato@leticiakratka.com.br</a></p>
             <p class="legal">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você
                 sair
                 do Facebook, a responsabilidade não é deles e sim do nosso site. A compra desse material não garante
@@ -628,7 +631,7 @@
 
     <section class="sec sec--slim sec--claro" style="padding-top:0">
         <div class="w">
-            <p class="legal"><span class="campo">[cidade/estado]</span> | CNPJ: <span class="campo">[CNPJ]</span></p>
+            <p class="legal">LK APOIO ADMINISTRATIVO | CNPJ: 42.091.414/0001-13</p>
         </div>
     </section>
 
@@ -727,6 +730,46 @@
           document.documentElement.classList.add('fast-connection');
         }
       }
+    </script>
+
+    <script>
+      /* O vídeo só baixa quando chega perto da tela. Antes ele tinha autoplay e
+         um <link rel="preload">, então os 9,5MB desciam com prioridade máxima
+         antes da página desenhar qualquer coisa, e o LCP ia pra ~13s.
+         O poster segura o lugar enquanto isso, então o layout não pula. */
+      (function () {
+        var videos = document.querySelectorAll('video[data-lazy-video]');
+        if (!videos.length) return;
+
+        function carregar(v) {
+          if (v.dataset.carregado) return;
+          v.dataset.carregado = '1';
+          var fontes = v.querySelectorAll('source[data-src]');
+          for (var i = 0; i < fontes.length; i++) {
+            fontes[i].src = fontes[i].dataset.src;
+          }
+          v.load();
+          // play() rejeita se o navegador bloquear; sem catch vira erro no console
+          var p = v.play();
+          if (p && p.catch) p.catch(function () { });
+        }
+
+        if (!('IntersectionObserver' in window)) {
+          Array.prototype.forEach.call(videos, carregar);
+          return;
+        }
+
+        var obs = new IntersectionObserver(function (entradas) {
+          entradas.forEach(function (e) {
+            if (e.isIntersecting) {
+              carregar(e.target);
+              obs.unobserve(e.target);
+            }
+          });
+        }, { rootMargin: '300px' });
+
+        Array.prototype.forEach.call(videos, function (v) { obs.observe(v); });
+      })();
     </script>
 </body>
 

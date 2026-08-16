@@ -46,6 +46,10 @@ body {
 
 img {
     max-width: 100%;
+    /* os atributos width/height do HTML servem só pra reservar o espaço e
+       evitar o layout pulando enquanto a imagem carrega; height:auto garante
+       que quem manda no tamanho final continua sendo o CSS, não o atributo */
+    height: auto;
     display: block
 }
 
