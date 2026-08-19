@@ -31,6 +31,22 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9GCCZSW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- ============ 0. BARRA VERMELHA DO TOPO ============ -->
+    <div class="topbar" id="faixa-topo">Somente hoje, desconto especial de <s>R$147</s> por <b>R$97</b></div>
+    <script>
+        // a faixa se atualiza sozinha todo dia: pega a data do navegador de quem
+        // esta vendo a pagina e escreve "dia X de mes". O texto que ja vem no HTML
+        // e o fallback, pra quem estiver com JS desligado.
+        (function () {
+            var faixa = document.getElementById('faixa-topo');
+            if (!faixa) return;
+            var hoje = new Date();
+            var dia = hoje.toLocaleDateString('pt-BR', { day: 'numeric' });
+            var mes = hoje.toLocaleDateString('pt-BR', { month: 'long' });
+            faixa.innerHTML = 'Somente hoje, dia <b>' + dia + ' de ' + mes + '</b>, desconto especial de <s>R$147</s> por <b>R$97</b>';
+        })();
+    </script>
+
     <!-- ============ 1. LOGO ============ -->
     <section class="sec sec--slim sec--branco sec--logo">
         <div class="w">
@@ -397,8 +413,6 @@
                 </div>
 
                 <div class="hr"></div>
-                <div class="logo logo--p">CAIXA LIVRE</div>
-                <div class="hr"></div>
 
                 <p class="preco" style="margin-top:8px">12x de R$9,70</p>
                 <p class="avista">ou R$97 à vista</p>
@@ -538,8 +552,6 @@
                 </div>
 
                 <div class="hr"></div>
-                <div class="logo logo--p">CAIXA LIVRE</div>
-                <div class="hr"></div>
 
                 <p class="preco" style="margin-top:8px">12x de R$9,70</p>
                 <p class="avista">ou R$97 à vista</p>
@@ -572,7 +584,7 @@
     <section class="sec sec--branco">
         <div class="w">
             <h2 class="wn mb3">FAQ</h2>
-            <div class="g2">
+            <div class="faq">
                 <details open>
                     <summary>Já tentei planilha antes e desisti. Por que dessa vez seria diferente?</summary>
                     <p>Porque aqui você não fica sozinha tentando decifrar uma planilha muda. Você cola o extrato e ela organiza
